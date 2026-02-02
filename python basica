@@ -1,0 +1,168 @@
+Python KT:
+Key Points to Explain
+	•	No semicolons 😌
+	•	No data-type declarations (dynamic typing)
+	•	Indentation = blocks (VERY important)
+
+List: 
+numbers = [1, 2, 3, 4]
+names = ["Alice", "Bob", "Alice"]
+mixed = [1, "hello", 3.5]
+
+Dict:
+student = {
+    "name": "Simran",
+    "age": 22,
+    "course": "CS"
+}
+print(student["name"])
+student["age"] = 23
+student["city"] = "Pune"
+
+Set:
+unique_numbers = {1, 2, 3}
+
+Looping in data type:
+for item in numbers:
+    print(item)
+
+for key, value in student.items():
+    print(key, value)
+
+
+s = {}      # ❌ This is a dict
+s = set()   # ✅ Empty set
+
+
+For loop: 
+for i in range(1, 10, 2):
+    print(i)
+
+squares = [x*x for x in range(5)]
+even = [x for x in range(10) if x % 2 == 0]
+
+for _ in range(5):
+    print("Hello")
+_ I dont care what variable it is
+
+Note : python ignores reassignment inside loop
+
+for i in []:
+    print("Hello")
+This won’t give error but no output
+
+for i in range(5):
+    print(i)
+else:
+    print("Done")
+0 1 2 3 4 Done
+But if put break then Done will not print
+
+Looping over dict means giving keys
+
+a = [1, 2, 3]
+b = [10, 20]
+
+for x, y in zip(a, b):
+    print(x, y)
+Stops over shortest list
+
+for i in range(10, 0, -3):
+    print(i)
+Looping backwards
+
+for k, v in d.items():
+    print(k, v)
+Correct way to unpack
+
+s = {1, 2, 3}
+i = 0
+while i < len(s):
+    print(s.pop())
+    i += 1
+Output is un predictable
+
+names = ["A", "B", "C"]
+
+for i, name in enumerate(names, start=1):
+    print(i, name)
+output : 
+1 A
+2 B
+3 C
+
+nums = [1, 2, 3]
+
+for n in nums:
+    nums.append(n)
+    print(n)
+infinite
+
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+not print 2
+
+i = 100
+
+for i in range(3):
+    pass
+
+print(i)
+output : 2
+
+List:
+a = [1, 2]
+a.append(3)
+a = [1, 2]
+a.extend([3, 4])
+a = [1, 2, 3]
+a.insert(1, 10)
+a.remove(2)
+x = a.pop() last element
+a.clear()
+a.index(3)
+a.count(2)
+a.sort()        # modifies
+b = sorted(a)   # returns new list
+
+a.reverse()
+
+a[1:4]
+a[::-1]   # reverse
+
+Dictionary:
+d.get("age", 0)
+d.update({"city": "Pune"})
+d.pop("age") key
+d.popitem() removes last inserted item
+d.clear()
+d.setdefault("score", 0)
+
+Set:
+s.add(5)
+s.remove(3)   # error if missing
+s.discard(3)  # safe
+s.pop()
+s.clear()
+
+list(set(nums))              # remove duplicates
+dict.fromkeys(keys, 0)       # initialize dict
+sorted(d.items())            # sort dict
+
+Questions:
+a = [10, 20, 30]
+x = a.pop(0)
+print(x)
+print(a)
+
+sort modifies sorted returns
+
+Memory Allocation:
+a ──┐
+    ├────▶ [ 10 ]
+b ──┘
+
+
+
